@@ -1,0 +1,15 @@
+.navbar {
+    border: 1px solid #ddd; /* Borda do menu */
+  }
+  
+  .nav-link {
+    margin: 0 15px; /* Espaçamento entre os itens */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Efeito de transição */
+  }
+  
+  .nav-link:hover {
+    background-color: #007bff; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+  }

@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <h2>Adicionar Livro</h2>
+  <form (ngSubmit)="adicionarLivro()">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" id="titulo" class="form-control" [(ngModel)]="livro.titulo" name="titulo" required>
+    </div>
+    <div class="mb-3">
+      <label for="editora" class="form-label">Editora</label>
+      <input type="text" id="editora" class="form-control" [(ngModel)]="livro.editora" name="editora" required>
+    </div>
+    <div class="mb-3">
+      <label for="anoPublicacao" class="form-label">Ano de Publicação</label>
+      <input type="text" id="anoPublicacao" class="form-control" [(ngModel)]="livro.anoPublicacao" name="anoPublicacao" required>
+    </div>
+    
+    <div class="mb-3">
+      <label for="valor" class="form-label">Valor do Livro</label>
+      <input 
+          type="text" 
+          id="valor" 
+          class="form-control" 
+          placeholder="0,00" 
+          [(ngModel)]="livro.valor" 
+          name="valor" 
+          required 
+          (input)="formatarValor($event)">
+    </div>
+
+    <h3>Autores</h3>
+    <div *ngFor="let autor of livro.autorCodAus; let i = index; trackBy: trackByAutor" class="mb-3">
+      <label for="autor{{i}}" class="form-label">Nome do Autor</label>
+      <input type="text" id="autor{{i}}" class="form-control" [(ngModel)]="livro.autorCodAus[i].nome" name="autor{{i}}" required>
+      <button type="button" class="btn btn-danger mt-2" (click)="removerAutor(i)">Remover Autor</button>
+    </div>
+    <button type="button" class="btn btn-primary mb-3" (click)="adicionarAutor()">Adicionar Autor</button>
+
+    <h3>Assuntos</h3>
+    <div *ngFor="let assunto of livro.assuntoCodAs; let j = index; trackBy: trackByAssunto" class="mb-3">
+      <label for="assunto{{j}}" class="form-label">Descrição do Assunto</label>
+      <input type="text" id="assunto{{j}}" class="form-control" [(ngModel)]="livro.assuntoCodAs[j].descricao" name="assunto{{j}}" required>
+      <button type="button" class="btn btn-danger mt-2" (click)="removerAssunto(j)">Remover Assunto</button>
+    </div>
+    <button type="button" class="btn btn-primary mb-3" (click)="adicionarAssunto()">Adicionar Assunto</button>
+
+    <div class="d-flex mt-4" style="gap: 10px;">
+      <button type="submit" class="btn btn-success">Salvar</button>
+      <a routerLink="/livros" class="btn btn-secondary">Cancelar</a>
+    </div>
+  </form>
+</div>

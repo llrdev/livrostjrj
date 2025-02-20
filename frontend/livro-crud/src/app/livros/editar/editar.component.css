@@ -1,0 +1,16 @@
+.form-container {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário na página */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Cor de fundo clara */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Espaço entre grupos de formulários */
+  }
+  
+  .btn {
+    margin-top: 10px; /* Espaço acima dos botões */
+  }

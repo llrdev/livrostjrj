@@ -1,0 +1,8 @@
+/* Exemplo de estilo para toasts */
+.toast-success {
+    background-color: #5cb85c; /* Verde */
+  }
+  
+  .toast-error {
+    background-color: #d9534f; /* Vermelho */
+  }

@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h2>Lista de Livros</h2>
+  <a routerLink="/livros/adicionar" class="btn btn-primary mb-3">Adicionar Livro</a>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autores</th>
+        <th>Editora</th>
+        <th>Ano de Publicação</th>
+        <th>Assuntos</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let livro of livros">
+        <td>{{ livro.codi }}</td>
+        <td>{{ livro.titulo }}</td>
+        <td>
+          <span *ngFor="let autor of livro.autorCodAus; let i = index">
+            {{ autor.nome }}<span *ngIf="i < livro.autorCodAus.length - 1">, </span>
+          </span>
+        </td>
+        <td>{{ livro.editora }}</td>
+        <td>{{ livro.anoPublicacao }}</td>
+        <td>
+          <span *ngFor="let assunto of livro.assuntoCodAs; let j = index">
+            {{ assunto.descricao }}<span *ngIf="j < livro.assuntoCodAs.length - 1">, </span>
+          </span>
+        </td>
+        <td>
+          <a [routerLink]="['/livros/editar', livro.codi]" class="btn btn-warning">Editar</a>
+          <button (click)="excluirLivro(livro.codi!)" class="btn btn-danger">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

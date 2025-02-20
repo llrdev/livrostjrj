@@ -1,0 +1,43 @@
+<form (ngSubmit)="atualizarLivro()" class="form-container">
+  <div class="form-group">
+    <label for="titulo">Título</label>
+    <input type="text" [(ngModel)]="livro.titulo" name="titulo" required class="form-control" placeholder="Título">
+  </div>
+  
+  <div class="form-group">
+    <label for="editora">Editora</label>
+    <input type="text" [(ngModel)]="livro.editora" name="editora" required class="form-control" placeholder="Editora">
+  </div>
+  
+  <div class="form-group">
+    <label for="anoPublicacao">Ano de Publicação</label>
+    <input type="text" [(ngModel)]="livro.anoPublicacao" name="anoPublicacao" required class="form-control" placeholder="Ano de Publicação">
+  </div>
+  
+  <div class="form-group">
+    <label for="valor">Valor</label>
+    <input type="number" [(ngModel)]="livro.valor" name="valor" required class="form-control" placeholder="Valor">
+  </div>
+
+  <h4>Autores</h4>
+  <div *ngFor="let autor of livro.autorCodAus; let i = index" class="form-group">
+    <input type="text" [(ngModel)]="autor.nome" name="autorNome{{i}}" placeholder="Nome do Autor" class="form-control">
+    <input type="hidden" [(ngModel)]="autor.codAu" name="autorCodAu{{i}}" required>
+    <button type="button" class="btn btn-danger" (click)="removerAutor(i)">Remover</button>
+  </div>
+  <button type="button" class="btn btn-secondary" (click)="adicionarAutor()">Adicionar Autor</button>
+  
+  <h4>Assuntos</h4>
+  <div *ngFor="let assunto of livro.assuntoCodAs; let i = index" class="form-group">
+    <input type="text" [(ngModel)]="assunto.descricao" name="assuntoDescricao{{i}}" placeholder="Descrição do Assunto" class="form-control">
+    <input type="hidden" [(ngModel)]="assunto.codAs" name="assuntoCodAs{{i}}" required>
+    <button type="button" class="btn btn-danger" (click)="removerAssunto(i)">Remover</button>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-secondary" (click)="adicionarAssunto()">Adicionar Assunto</button>
+  </div>
+  
+
+  <button type="submit" class="btn btn-primary">Atualizar Livro</button>
+</form>
