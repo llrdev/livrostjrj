@@ -20,7 +20,12 @@ Package                         Version
 rxjs                            7.8.1
 typescript                      4.9.5
 
+Em livros.service, precisa alterar a url de chamada do backend conforme necessário:
+private apiBaseUrl = 'https://localhost:44393/api/Livros';  // Ajuste o URL conforme necessário
 
+Em relatorio.component tambem:
+this.http.get('https://localhost:44393/api/Livros/relatorio', { responseType: 'blob' }) // Espera um blob como resposta
+    .subscribe((response: Blob) => {
 
 Backend
 ========
