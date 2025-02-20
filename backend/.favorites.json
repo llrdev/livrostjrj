@@ -1,0 +1,46 @@
+[
+    {
+        "type": "Group",
+        "name": "Pontos",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "Azs4vXUfFlKVWtxa"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\jefferson.montreal\\Workspace\\CORHI\\frontend\\src\\router.js",
+        "parent_id": "Azs4vXUfFlKVWtxa",
+        "fsPath": "c:\\Users\\jefferson.montreal\\Workspace\\CORHI\\frontend\\src\\router.js",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "xqenX701kWLRmJYu"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\jefferson.montreal\\Workspace\\CORHI\\frontend\\src\\store.js",
+        "parent_id": "Azs4vXUfFlKVWtxa",
+        "fsPath": "c:\\Users\\jefferson.montreal\\Workspace\\CORHI\\frontend\\src\\store.js",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "N1xyIrjHvC5ZThB2"
+    },
+    {
+        "type": "Directory",
+        "name": "c:\\Users\\jefferson.montreal\\Workspace\\CORHI\\frontend\\src\\views\\Daurh",
+        "parent_id": "Azs4vXUfFlKVWtxa",
+        "fsPath": "c:\\Users\\jefferson.montreal\\Workspace\\CORHI\\frontend\\src\\views\\Daurh",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "GfNxi3PnAEmZOC4c"
+    },
+    {
+        "type": "Directory",
+        "name": "c:\\Users\\jefferson.montreal\\Workspace\\CORHI\\frontend\\src\\modules\\Daurh",
+        "parent_id": "Azs4vXUfFlKVWtxa",
+        "fsPath": "c:\\Users\\jefferson.montreal\\Workspace\\CORHI\\frontend\\src\\modules\\Daurh",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "GwgZm4k1sfctJNCH"
+    }
+]

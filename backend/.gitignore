@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+# Custom (files specifieds)
+
+webapi/appsettings.json
+webapi/appsettings.Prd.json
+webapi/appsettings.Hml.json
+webapi/appsettings.Development.json
+
+.vs/
+.vscode/

@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Webapi</name>
+    </assembly>
+    <members>
+        <member name="M:Webapi.Controllers.AccountController.SignInAsync(Domain.Dtos.SignInDTO)">
+            <summary>
+            Logar
+            </summary>
+            <param name="signIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.AccountController.CheckToken">
+            <summary>
+            Verifica a validade do token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.CategoriaController.GetAll">
+            <summary>
+            Lista todas as categorias
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Webapi.Controllers.Core.BaseApiController">
+            <summary>
+            Controlador base
+            </summary>
+        </member>
+        <member name="M:Webapi.Controllers.Core.BaseApiController.LoginNome">
+            <summary>
+            Extrai do usuario autenticado o login e nome.
+            </summary>
+        </member>
+        <member name="M:Webapi.Controllers.Core.BaseApiController.GetRolesUsuario">
+            <summary>
+            Extrai do usuario autenticado as roles.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.Core.BaseApiController.GetParametros(System.String)">
+            <summary>
+            Recupera os parametros setados na query string e adiciona auditoria
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.Core.BaseApiController.GetExtensaoEMimeType(Webapi.Core.Enums.EnumFileType)">
+            <summary>
+            Recupera a extensão e mime type para o tipo de arquivo passado
+            </summary>
+            <param name="ft"></param>
+        </member>
+        <member name="T:Webapi.Controllers.DataController">
+            <summary>
+            Controlador de dados para testes.
+            Excluir da sua aplicação após iniciar a implementação
+            </summary>
+        </member>
+        <member name="M:Webapi.Controllers.DataController.GetUnidades(System.String)">
+            <summary>
+            Unidades de teste
+            </summary>
+            <param name="termo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Webapi.Controllers.HomeController">
+            <summary>
+            Home
+            </summary>
+        </member>
+        <member name="M:Webapi.Controllers.HomeController.Index">
+            <summary>
+            Index - Entrada Front End
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Webapi.Controllers.JasperServerController">
+            <summary>
+            Controlador para relatorios do jasper server.
+            </summary>
+        </member>
+        <member name="M:Webapi.Controllers.JasperServerController.LoginAsync">
+            <summary>
+            Recupera o session id para o sistema para ser usado na recuperação dos relatórios
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.JasperServerController.LogoutAsync(System.String)">
+            <summary>
+            Logout no JasperServer.
+            Boa prática chamar este ao efetuar logoff do usuário no sistema
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.JasperServerController.GetAsync(System.String,System.String,Webapi.Core.Enums.EnumFileType)">
+            <summary>
+            Recupera o binário do relatório
+            </summary>
+            <param name="sessionId"></param>
+            <param name="resource"></param>
+            <param name="fileType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.ProdutoController.Get(System.Int32)">
+            <summary>
+            Produto por identificador
+            </summary>
+            <param name="idProduto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.ProdutoController.Get(Webapi.Core.Pagination,Domain.Dtos.Produto.ProdutoSearchDTO)">
+            <summary>
+            Produto por filtros e paginado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.ProdutoController.Post(Domain.Dtos.Produto.ProdutoDTO)">
+            <summary>
+            Adiciona produto
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.ProdutoController.Put(System.Int32,Domain.Dtos.Produto.ProdutoDTO)">
+            <summary>
+            Atualiza um produto
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.ProdutoController.Delete(System.Int32)">
+            <summary>
+            Deleta um produto
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Controllers.ProdutoController.Patch(System.Int32,System.String)">
+            <summary>
+            Descontinua um produto
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Webapi.Controllers.SysInfoController">
+            <summary>
+            Controller de Informações do Sistema
+            </summary>
+        </member>
+        <member name="M:Webapi.Controllers.SysInfoController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="M:Webapi.Controllers.SysInfoController.Version">
+            <summary>
+            Versão do Sistema
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Webapi.Core.Attributes.CustomAutorizeAttribute">
+            <summary>
+            Autorização customizada
+            </summary>
+        </member>
+        <member name="M:Webapi.Core.Enums.EnumExtension.GetDescriptionEnum(System.Enum)">
+            <summary>
+            Retorna a descrição de um enumerador
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Webapi.Core.Enums.EnumFileType">
+            <summary>
+            Enumerador de tipo de arquivos
+            </summary>
+        </member>
+        <member name="F:Webapi.Core.Enums.EnumFileType.pdf">
+            <summary>
+            pdf
+            </summary>
+        </member>
+        <member name="F:Webapi.Core.Enums.EnumFileType.xls">
+            <summary>
+            xlsx
+            </summary>
+        </member>
+        <member name="F:Webapi.Core.Enums.EnumFileType.html">
+            <summary>
+            html
+            </summary>
+        </member>
+        <member name="F:Webapi.Core.Enums.EnumFileType.csv">
+            <summary>
+            csv
+            </summary>
+        </member>
+        <member name="F:Webapi.Core.Enums.EnumFileType.txt">
+            <summary>
+            txt
+            </summary>
+        </member>
+        <member name="F:Webapi.Core.Enums.EnumFileType.xlsx">
+            <summary>
+            xlsx
+            </summary>
+        </member>
+        <member name="F:Webapi.Core.Enums.EnumFileType.docx">
+            <summary>
+            docx
+            </summary>
+        </member>
+        <member name="T:Webapi.Core.Enums.Roles">
+            <summary>
+            Roles do sistema
+            </summary>
+        </member>
+        <member name="T:Webapi.Core.Helpers.IJasperServerHelper">
+            <summary>
+            Auxiliar para trabalhar com relatorios no jasper server
+            </summary>
+        </member>
+        <member name="M:Webapi.Core.Helpers.IJasperServerHelper.Logar(System.String,System.String)">
+            <summary>
+            Realiza o login no jasper server
+            </summary>
+            <param name="usuario"></param>
+            <param name="senha"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Core.Helpers.IJasperServerHelper.Logout(System.String)">
+            <summary>
+            Fecha a sessão no jasper server. 
+            E boa prática ao realizar o logoff do usuário na aplicação realizar o fechamento da sessão no jasper server.
+            </summary>
+            <param name="sessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Core.Helpers.IJasperServerHelper.Get(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Recupera o relatório no jasper server
+            </summary>
+            <param name="sessionId"></param>
+            <param name="parametros"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Core.Helpers.JasperServerHelper.Base64Encode(System.String)">
+            <summary>
+            Encode
+            </summary>
+            <param name="plainText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Core.Helpers.JasperServerHelper.Base64Decode(System.String)">
+            <summary>
+            Decode
+            </summary>
+            <param name="base64EncodedData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Core.Helpers.JasperServerHelper.MontarUrlRelatorio(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Extrai os parametros e monta a url do relatorio
+            </summary>
+            <param name="parametros"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Webapi.Core.Helpers.PaginationHelper.GetQueryString(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Recupera query string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Webapi.Core.Helpers.TokenHelper">
+            <summary>
+            Gera o token de acesso ao sistema
+            </summary>
+        </member>
+        <member name="M:Webapi.Core.Helpers.TokenHelper.GenerateToken(System.String,System.Int32,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Gera o token de acesso para um usuário do sistema.
+            </summary>
+            <param name="secret">chave</param>
+            <param name="expires">horas de duração</param>
+            <param name="login">login usuario</param>
+            <param name="perfis">perfis de acesso</param>
+            <returns></returns>
+        </member>
+        <member name="T:Webapi.Core.Mensagens">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.CampoInvalido">
+            <summary>
+              Looks up a localized string similar to O campo {0} não é válido..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.CampoRequerido">
+            <summary>
+              Looks up a localized string similar to O campo {0} é obrigatório..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.DataInvalida">
+            <summary>
+              Looks up a localized string similar to A data do campo {0} é inválida..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.DataMaior">
+            <summary>
+              Looks up a localized string similar to A {0} precisa ser maior que a {1}. .
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.DataMenor">
+            <summary>
+              Looks up a localized string similar to A {0} precisa ser menor que a {1}..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.EmailInvalido">
+            <summary>
+              Looks up a localized string similar to O email está em um formato inválido..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.EmailSemDesinatario">
+            <summary>
+              Looks up a localized string similar to O email está sem destinatário..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.ErroDefault">
+            <summary>
+              Looks up a localized string similar to Ocorreu um erro ao executar a operação..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.HoraInvalida">
+            <summary>
+              Looks up a localized string similar to A hora do campo {0} é inválida..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.LimiteStrings">
+            <summary>
+              Looks up a localized string similar to O campo {0} deve ter no mínimo {1} e no máximo {2} caracteres.
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.LimiteValores">
+            <summary>
+              Looks up a localized string similar to O campo {0} deve estar no intervalo de {1} à {2}..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.MaximoCaracteres">
+            <summary>
+              Looks up a localized string similar to O campo {0} deve ter no máximo {1} caracteres..
+            </summary>
+        </member>
+        <member name="P:Webapi.Core.Mensagens.SucessoDefault">
+            <summary>
+              Looks up a localized string similar to Operação realizada com sucesso..
+            </summary>
+        </member>
+        <member name="M:Webapi.Extensions.GuardianExtensions.UseGuardian(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            Adiciona ao service collection o guardian.
+            </summary>
+        </member>
+        <member name="M:Webapi.Extensions.JasperServerHelperExtensions.UseJasperServerHelper(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            Adiciona o helper jasper server ao service collection
+            </summary>
+            <param name="serviceCollection"></param>
+            <param name="uriJasperServer"></param>
+        </member>
+        <member name="M:Webapi.Extensions.ServicesExtensions.UseDomainServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Injeção de dependencia dos servicos do domínio
+            </summary>
+            <param name="serviceCollection"></param>
+        </member>
+        <member name="T:Webapi.Extensions.SwaggerExtensions">
+            <summary>
+            Swagger Extensions
+            </summary>
+        </member>
+        <member name="M:Webapi.Extensions.SwaggerExtensions.UseSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String)">
+            <summary>
+            Injeção de dependencia dos servicos do domínio
+            </summary>
+            <param name="serviceCollection"></param>
+            <param name="title"></param>
+            <param name="version"></param>
+        </member>
+        <member name="M:Webapi.Extensions.UriHelperExtensions.UseUriHelper(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Injeção de dependencia do servico de uri
+            </summary>
+            <param name="serviceCollection"></param>
+        </member>
+        <member name="M:Webapi.Validators.SignInValidator.#ctor">
+            <summary>
+            Validacoes
+            </summary>
+        </member>
+        <member name="M:webapi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:webapi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
