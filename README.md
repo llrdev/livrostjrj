@@ -29,7 +29,7 @@ Backend
 
 
 
-Sscript criacao banco de dados
+Script criacao banco de dados
 ===============================
 SQL SERVER
 
